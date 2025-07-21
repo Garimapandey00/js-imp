@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .counter {
+            height: 190px;
+            width: 400px;
+            background-color: burlywood;
+            display: flex;
+            flex-direction: column;
+           margin-inline: 500px;
+           margin-top: 270px;
+        }
+
+        h1 {
+            justify-content: center;
+            color: rgb(7, 7, 43);
+            text-align: center;
+        }
+
+        #count {
+            text-align: center;
+
+        }
+
+        .decrease {
+            text-align: center;
+            background-color: brown;
+           
+        }
+
+        .reset {
+            text-align: center;
+            background-color: rgb(47, 230, 47);
+        }
+
+        .increase {
+            text-align: center;
+            background-color: aqua;
+        }
+        .button{
+            margin-left: 150px;
+            cursor: pointer;
+        }
+        .decrease:hover{
+            background-color: aquamarine;
+        }
+        .increase:hover{                  
+            background-color: blue;           
+        }
+        /* hover use garera color change hunxa  */
+    </style>
+</head>
+
+<body>
+    <div class="counter">
+        <h1>Simple Counter</h1>
+        <div id="count">5</div><br>
+        <div class="button">
+            <button class="decrease" onclick="changecount(-1)">-</button>
+        <button class="reset" onclick="resetcount()">reset</button>
+        <button class="increase" onclick="changecont(1)">+</button>
+        </div>
+
+    </div>
+</body>
+<script>
+    function changecount(){
+   let counterElem = document.getElementById("count")
+   let value = counterElem.textContent
+   value = value - 1
+   console.log(value);
+   counterElem.innerText=value
+
+
+    }
+    function resetcount() { 
+     let counterElem = document.getElementById("count")
+     counterElem.innerText=0
+    }
+
+    function changecont(){
+   let counterElem = document.getElementById("count")
+   let value = counterElem.textContent
+   value =parseInt (value )+ 1
+   console.log(value);
+   counterElem.innerText=value
+
+
+    }
+</script>
+</html>
